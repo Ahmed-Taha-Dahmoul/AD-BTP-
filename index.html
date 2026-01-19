@@ -7,7 +7,7 @@
     <link rel="icon" href="logo.jpg" type="image/jpeg">
 
     <!-- SEO Meta Tags -->
-    <title>AD BTP - Rénovation & Construction pour Familles en Alsace</title>
+    <title>AD BTP - Rénovation & Construction en Alsace</title>
     <meta name="description"
         content="AD BTP : Expert en rénovation et construction en Alsace (Strasbourg, Mulhouse, Colmar). Service clé en main pour familles : maçonnerie, isolation, peinture, sols. Devis Gratuit." />
     <meta name="keywords"
@@ -340,21 +340,61 @@
                             </a>
                         </div>
                     </div>
-                    <!-- Call to Action Card -->
+                    <!-- Service 6 -->
                     <div
-                        class="flex flex-col items-center justify-center p-8 bg-slate-dark rounded-2xl shadow-xl text-center gap-6">
-                        <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                            <span class="material-symbols-outlined text-4xl">add</span>
+                        class="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="h-56 overflow-hidden">
+                            <!-- Placeholder image, user to replace -->
+                            <div class="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
+                                <img alt="Isolation thermique extérieure et intérieure"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    src="revetement-sol-salle-de-bain.avif" />
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="text-white text-xl font-bold mb-2">Un autre projet ?</h4>
-                            <p class="text-slate-400 text-sm">Électricité, plomberie, aménagement... Contactez-nous pour
-                                en discuter.</p>
+                        <div class="p-8 flex flex-col gap-3">
+                            <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">water_drop</span>
+                                Revêtement Cuisine & SDB
+                            </h4>
+                            <p class="text-slate-500 leading-relaxed">Rénovation complète des pièces d'eau : carrelage,
+                                faïence et étanchéité soignée.</p>
+                            <a class="text-primary font-bold text-sm mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all"
+                                href="#contact">
+                                Demander un devis <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
                         </div>
-                        <a class="w-full py-3 rounded-xl bg-primary hover:bg-[#e07515] text-white font-bold transition-colors inline-block"
-                            href="#contact">
-                            Contactez-nous
-                        </a>
+                    </div>
+                    <!-- Call to Action Card -->
+                    <!-- Call to Action Card (Full Width) -->
+                    <div
+                        class="md:col-span-2 lg:col-span-3 relative overflow-hidden group rounded-3xl bg-slate-900 shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+                        <!-- Decorative background -->
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-500 transform translate-x-1/2 -translate-y-1/2">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-colors duration-500 transform -translate-x-1/2 translate-y-1/2">
+                        </div>
+
+                        <div
+                            class="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 gap-8">
+                            <div class="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-primary flex-shrink-0 backdrop-blur-sm border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-4xl">design_services</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-white text-2xl md:text-3xl font-extrabold mb-2">Un projet sur mesure
+                                        ?</h4>
+                                    <p class="text-slate-400 text-lg max-w-xl">Vous avez une idée spécifique en tête ?
+                                        Discutons de votre vision, nous relevons tous les défis de rénovation.</p>
+                                </div>
+                            </div>
+                            <a class="flex-shrink-0 bg-primary hover:bg-[#e07515] text-white font-bold text-lg py-4 px-10 rounded-xl transition-all transform hover:scale-105 shadow-xl shadow-primary/30 flex items-center gap-2"
+                                href="#contact">
+                                Parlons-en <span class="material-symbols-outlined">chat</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -784,10 +824,28 @@
         <span class="phone-btn-text font-bold text-lg">07 61 34 00 48</span>
     </a>
 
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top"
+        class="fixed bottom-6 right-6 z-40 bg-slate-800 text-white p-3 rounded-full shadow-lg opacity-0 translate-y-10 transition-all duration-300 hover:bg-primary focus:outline-none hidden"
+        aria-label="Retour en haut">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
     <script>
+        // Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
         // Floating Phone Button Logic
         const phoneBtn = document.getElementById('floating-phone-btn');
+        const scrollBtn = document.getElementById('scroll-to-top');
+
         window.addEventListener('scroll', () => {
+            // Phone button logic (shows after 300px)
             if (window.scrollY > 300) {
                 phoneBtn.classList.remove('translate-y-24', 'opacity-0');
             } else {
@@ -795,15 +853,6 @@
             }
         });
 
-        // Simple Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
 
         // Smooth scroll for anchor links (if browser doesn't support scroll-smooth in CSS)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
