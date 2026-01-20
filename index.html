@@ -156,9 +156,9 @@
                         <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
                             href="#services">Nos Services</a>
                         <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
-                            href="#reviews">Avis Clients</a>
-                        <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
                             href="#about">L'Entreprise</a>
+                        <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
+                            href="#reviews">Avis Clients</a>
                     </div>
                     <a class="flex items-center justify-center rounded-full h-11 px-6 bg-primary hover:bg-[#e07515] transition-all transform hover:scale-105 shadow-lg shadow-primary/30 text-white text-base font-bold"
                         href="#contact">
@@ -179,9 +179,9 @@
                 <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
                     href="#services">Nos Services</a>
                 <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
-                    href="#reviews">Avis Clients</a>
-                <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
                     href="#about">L'Entreprise</a>
+                <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
+                    href="#reviews">Avis Clients</a>
                 <a class="text-center rounded-lg py-3 bg-primary text-white font-bold shadow-md block" href="#contact">
                     Devis Gratuit
                 </a>
@@ -646,7 +646,7 @@
                             </a>
 
                             <!-- Clickable Email Card -->
-                            <a href="mailto:contact@adbtp.fr"
+                            <a href="mailto:ad.batiment67@gmail.com"
                                 class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-50 flex items-center gap-5 group cursor-pointer hover:-translate-y-1 block">
                                 <div
                                     class="w-14 h-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
@@ -655,7 +655,7 @@
                                 <div>
                                     <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Email</p>
                                     <span
-                                        class="text-lg md:text-xl font-bold text-slate-dark break-all group-hover:text-blue-600 transition-colors">contact@adbtp.fr</span>
+                                        class="text-lg md:text-xl font-bold text-slate-dark break-all group-hover:text-blue-600 transition-colors">ad.batiment67@gmail.com</span>
                                 </div>
                             </a>
                         </div>
@@ -665,34 +665,36 @@
                         <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-bl-full pointer-events-none">
                         </div>
                         <!-- Form simulates sending mail or just visual for showcase-->
-                        <form class="flex flex-col gap-5 relative z-10" action="mailto:contact@adbtp.fr" method="GET"
-                            enctype="text/plain">
+                        <!-- Form configured for Formspree -->
+                        <!-- TODO: Replace the action URL with your own from https://formspree.io/ -->
+                        <form class="flex flex-col gap-5 relative z-10"
+                            action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
                             <h4 class="text-xl font-bold text-slate-dark mb-2">Envoyez-nous un message</h4>
                             <div class="flex flex-col gap-2">
                                 <label class="font-bold text-slate-700 text-sm" for="name">Nom complet</label>
                                 <input
                                     class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:bg-white transition-all shadow-sm"
-                                    id="name" name="subject" placeholder="Votre nom" type="text" required />
+                                    id="name" name="name" placeholder="Votre nom" type="text" required />
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div class="flex flex-col gap-2">
                                     <label class="font-bold text-slate-700 text-sm" for="email">Email</label>
                                     <input
                                         class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:bg-white transition-all shadow-sm"
-                                        id="email" placeholder="votre@email.com" type="email" required />
+                                        id="email" name="email" placeholder="votre@email.com" type="email" required />
                                 </div>
                                 <div class="flex flex-col gap-2">
                                     <label class="font-bold text-slate-700 text-sm" for="phone">Téléphone</label>
                                     <input
                                         class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:bg-white transition-all shadow-sm"
-                                        id="phone" placeholder="06 00 00 00 00" type="tel" />
+                                        id="phone" name="phone" placeholder="06 00 00 00 00" type="tel" />
                                 </div>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label class="font-bold text-slate-700 text-sm" for="message">Message</label>
                                 <textarea
                                     class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:bg-white transition-all resize-none shadow-sm"
-                                    id="message" name="body" placeholder="Décrivez votre projet..." rows="4"
+                                    id="message" name="message" placeholder="Décrivez votre projet..." rows="4"
                                     required></textarea>
                             </div>
                             <button
@@ -734,12 +736,12 @@
                                 <span class="font-medium">07 61 34 00 48</span>
                             </a>
                             <a class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group"
-                                href="mailto:contact@adbtp.fr">
+                                href="mailto:ad.batiment67@gmail.com">
                                 <div
                                     class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-primary transition-colors text-primary group-hover:text-white">
                                     <span class="material-symbols-outlined text-sm">mail</span>
                                 </div>
-                                <span>contact@adbtp.fr</span>
+                                <span>ad.batiment67@gmail.com</span>
                             </a>
                             <div class="flex items-center gap-3 text-slate-300">
                                 <div
@@ -775,7 +777,7 @@
                         <h4 class="text-lg font-bold text-white border-l-4 border-primary pl-3">Devis Rapide</h4>
                         <p class="text-sm text-slate-400">Laissez votre email, nous vous rappelons pour parler de votre
                             projet.</p>
-                        <form class="flex flex-col gap-3" action="mailto:contact@adbtp.fr" method="GET"
+                        <form class="flex flex-col gap-3" action="mailto:ad.batiment67@gmail.com" method="GET"
                             enctype="text/plain">
                             <input name="body"
                                 class="bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-slate-500"
@@ -854,14 +856,20 @@
         });
 
 
-        // Smooth scroll for anchor links (if browser doesn't support scroll-smooth in CSS)
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                mobileMenu.classList.add('hidden'); // close menu on click
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                menu.classList.add('hidden'); // Close mobile menu if open
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
             });
         });
     </script>
