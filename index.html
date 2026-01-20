@@ -76,13 +76,36 @@
     }
     </script>
 
+    <!-- Resource Hints for Performance -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
+    <!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="logo.png" />
+    <link rel="preload" as="image"
+        href="https://lh3.googleusercontent.com/aida-public/AB6AXuBaEc-Hk-iPi6W0foJx-P9_I-_8Nx7W1ggxOIY5xV1549Tdv0NbV0pVfI0tc30RoNTleczwEonziv531lUTHAWYF2k1w545wXlkv7o9f3TIOp_D6femMwqiSeWMDn3prU_wgq0XpA12slb5-edDydZaqDzuyWEEs8UbJcqapiSRWFmwymIfOBdNm66ahwkcUeKL4ttqErFUuFmrvGoAcDRf8sPaK3G8RfC8L8wWA2aTwQayGtu-gaP1mJdPc3k42kZIIWtuPw8Kii-2"
+        fetchpriority="high" />
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -234,7 +257,7 @@
 <body class="bg-cool-gray text-slate-dark antialiased">
     <!-- Loading Screen -->
     <div id="loading-screen">
-        <img src="logo.png" alt="AD BTP Logo" class="loading-logo">
+        <img src="logo.png" alt="AD BTP Logo" class="loading-logo" width="80" height="80">
         <div class="loading-dots">
             <div class="loading-dot"></div>
             <div class="loading-dot"></div>
@@ -251,7 +274,8 @@
                     <div
                         class="flex items-center justify-center w-12 h-12 group-hover:scale-105 transition-transform duration-300">
                         <!-- Logo Integration using circular logo.png -->
-                        <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain">
+                        <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain" width="48"
+                            height="48">
                     </div>
                     <div class="flex flex-col">
                         <h2
@@ -352,7 +376,7 @@
                         <div class="h-56 overflow-hidden">
                             <img alt="Rénovation Générale d'une maison en Alsace"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="Renovation.jpg" />
+                                src="Renovation.jpg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
@@ -373,7 +397,7 @@
                         <div class="h-56 overflow-hidden">
                             <img alt="Peinture et Décoration intérieure professionnelle"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="peinture.jpg" />
+                                src="peinture.jpg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
@@ -394,7 +418,7 @@
                         <div class="h-56 overflow-hidden">
                             <img alt="Pose de sols et parquets en bois"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="Sols&Carrelage.png" />
+                                src="Sols&Carrelage.png" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
@@ -415,7 +439,7 @@
                         <div class="h-56 overflow-hidden">
                             <img alt="Maçonnerie et extension de maison"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="Maçonnerie&Extension.jpg" />
+                                src="Maçonnerie&Extension.jpg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
@@ -436,7 +460,7 @@
                         <div class="h-56 overflow-hidden">
                             <img alt="Isolation thermique extérieure et intérieure"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="isolation-thermique-maison.jpeg" />
+                                src="isolation-thermique-maison.jpeg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
@@ -459,7 +483,7 @@
                             <div class="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
                                 <img alt="Isolation thermique extérieure et intérieure"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    src="revetement-sol-salle-de-bain.avif" />
+                                    src="revetement-sol-salle-de-bain.avif" loading="lazy" width="400" height="300" />
                             </div>
                         </div>
                         <div class="p-8 flex flex-col gap-3">
@@ -585,7 +609,8 @@
                         <div
                             class="relative rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white transform hover:scale-[1.01] transition-transform duration-500">
                             <img alt="Equipe AD BTP au travail en Alsace" class="w-full h-auto object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtWpFxa-r0sQJ5-LDTH0LtW8gpzD4LUlM1WKKkc3fwpkCDJ21t8pxKnPAsrSips8ta26nxRxiFNBzG9GYT-jOLAVrQzu8qNgbIhgaH8OP4XGmvCdzbklUTBdPorf9hy2X1jIURJ5mHgtRL4la1tGCV_DC3NR3wEhxEf3vlkhIOZhVOF1mKiJ13IFPmXkcaKQmktlt-OSADpSWSrqNVr6RUrWh9VBDSqDtwAxFkbLSRxfjrGyLkPTPMrRIRytsF4a5FN_QtZsTHaVBr" />
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtWpFxa-r0sQJ5-LDTH0LtW8gpzD4LUlM1WKKkc3fwpkCDJ21t8pxKnPAsrSips8ta26nxRxiFNBzG9GYT-jOLAVrQzu8qNgbIhgaH8OP4XGmvCdzbklUTBdPorf9hy2X1jIURJ5mHgtRL4la1tGCV_DC3NR3wEhxEf3vlkhIOZhVOF1mKiJ13IFPmXkcaKQmktlt-OSADpSWSrqNVr6RUrWh9VBDSqDtwAxFkbLSRxfjrGyLkPTPMrRIRytsF4a5FN_QtZsTHaVBr"
+                                loading="lazy" width="600" height="400" />
                         </div>
                     </div>
                 </div>
@@ -824,7 +849,8 @@
                             <div
                                 class="flex items-center justify-center w-14 h-14 group-hover:scale-105 transition-transform duration-300">
                                 <!-- Logo Integration using circular logo.png -->
-                                <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain">
+                                <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain" width="56"
+                                    height="56">
                             </div>
                             <div class="flex flex-col">
                                 <h2
@@ -944,10 +970,10 @@
         // Loading Screen Logic
         window.addEventListener('load', () => {
             const loadingScreen = document.getElementById('loading-screen');
-            // Add a small delay for better UX
+            // Reduced delay for faster content visibility
             setTimeout(() => {
                 loadingScreen.classList.add('hidden');
-            }, 800);
+            }, 300);
         });
 
         // Mobile Menu Logic
@@ -958,18 +984,28 @@
             menu.classList.toggle('hidden');
         });
 
-        // Floating Phone Button Logic
+        // Floating Phone Button Logic with optimized scroll handler
         const phoneBtn = document.getElementById('floating-phone-btn');
         const scrollBtn = document.getElementById('scroll-to-top');
 
-        window.addEventListener('scroll', () => {
+        let ticking = false;
+
+        function updateScrollElements() {
             // Phone button logic (shows after 300px)
             if (window.scrollY > 300) {
                 phoneBtn.classList.remove('translate-y-24', 'opacity-0');
             } else {
                 phoneBtn.classList.add('translate-y-24', 'opacity-0');
             }
-        });
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScrollElements);
+                ticking = true;
+            }
+        }, { passive: true });
 
 
         // Smooth scroll for anchor links
