@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="fr">
+<html class="light scroll-smooth" lang="fr">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <!-- 1. Optimisation : Favicon en WebP -->
-    <link rel="icon" href="logo.webp" type="image/webp">
+    <link rel="icon" href="logo.png" type="image/png">
 
     <!-- SEO Meta Tags -->
-    <title>AD BTP - Rénovation & Construction en Alsace</title>
+    <title>AD BTP - Rénovation & Construction en Alsace </title>
     <meta name="description"
         content="AD BTP : Expert en rénovation et construction en Alsace (Strasbourg, Mulhouse, Colmar). Service clé en main pour familles : maçonnerie, isolation, peinture, sols. Devis Gratuit." />
     <meta name="keywords"
@@ -40,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "AD BTP",
-      "image": "https://ad-btp.fr/logo.webp",
+      "image": "https://ad-btp.fr/logo.png",
       "telephone": "+33761340048",
       "email": "ad.batiment67@gmail.com",
       "url": "https://ad-btp.fr",
@@ -54,29 +53,61 @@
         "@type": "GeoShape",
         "region": "Alsace, France"
       },
-      "areaServed": [ "Strasbourg", "Colmar", "Mulhouse", "Haguenau", "Sélestat" ],
+      "areaServed": [
+        "Strasbourg",
+        "Colmar",
+        "Mulhouse",
+        "Haguenau",
+        "Sélestat"
+      ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
         "opens": "08:00",
         "closes": "19:00"
       }
     }
     </script>
 
-    <!-- 2. Optimisation : Resource Hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Resource Hints for Performance -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
-        rel="stylesheet" />
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet" />
+    </noscript>
 
-    <!-- Tailwind -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
+    <!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="logo.png" />
+    <link rel="preload" as="image"
+        href="https://lh3.googleusercontent.com/aida-public/AB6AXuBaEc-Hk-iPi6W0foJx-P9_I-_8Nx7W1ggxOIY5xV1549Tdv0NbV0pVfI0tc30RoNTleczwEonziv531lUTHAWYF2k1w545wXlkv7o9f3TIOp_D6femMwqiSeWMDn3prU_wgq0XpA12slb5-edDydZaqDzuyWEEs8UbJcqapiSRWFmwymIfOBdNm66ahwkcUeKL4ttqErFUuFmrvGoAcDRf8sPaK3G8RfC8L8wWA2aTwQayGtu-gaP1mJdPc3k42kZIIWtuPw8Kii-2"
+        fetchpriority="high" />
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -123,11 +154,12 @@
 
         .group:hover .phone-btn-text {
             max-width: 200px;
+            /* Arbitrary large width */
             opacity: 1;
             margin-left: 0.5rem;
         }
 
-        /* 3. Optimisation : Loading Screen amélioré */
+        /* Loading Screen Styles */
         #loading-screen {
             position: fixed;
             top: 0;
@@ -140,13 +172,12 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
 
         #loading-screen.hidden {
             opacity: 0;
             visibility: hidden;
-            pointer-events: none;
         }
 
         .loading-logo {
@@ -226,8 +257,7 @@
 <body class="bg-cool-gray text-slate-dark antialiased">
     <!-- Loading Screen -->
     <div id="loading-screen">
-        <!-- Utilisation WebP + Dimensions -->
-        <img src="logo.webp" alt="AD BTP Logo" class="loading-logo" width="80" height="80">
+        <img src="logo.png" alt="AD BTP Logo" class="loading-logo" width="80" height="80">
         <div class="loading-dots">
             <div class="loading-dot"></div>
             <div class="loading-dot"></div>
@@ -243,8 +273,8 @@
                 <a href="#" class="flex items-center gap-3 group transition-all">
                     <div
                         class="flex items-center justify-center w-12 h-12 group-hover:scale-105 transition-transform duration-300">
-                        <!-- 4. Optimisation : Logo WebP -->
-                        <img src="logo.webp" alt="AD BTP Logo" class="w-full h-full object-contain" width="48"
+                        <!-- Logo Integration using circular logo.png -->
+                        <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain" width="48"
                             height="48">
                     </div>
                     <div class="flex flex-col">
@@ -273,13 +303,12 @@
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn"
-                    class="md:hidden text-white p-2 focus:outline-none hover:bg-white/10 rounded-lg transition-colors"
-                    aria-label="Menu">
+                    class="md:hidden text-white p-2 focus:outline-none hover:bg-white/10 rounded-lg transition-colors">
                     <span class="material-symbols-outlined text-3xl">menu</span>
                 </button>
             </div>
 
-            <!-- Mobile Menu -->
+            <!-- Mobile Menu (Hidden by default) -->
             <div id="mobile-menu"
                 class="hidden md:hidden bg-slate-800 border-t border-slate-700 shadow-xl px-4 py-4 flex flex-col gap-4 rounded-b-2xl">
                 <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
@@ -288,60 +317,47 @@
                     href="#about">L'Entreprise</a>
                 <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
                     href="#reviews">Avis Clients</a>
-                <a class="text-center rounded-lg py-3 bg-primary text-white font-bold shadow-md block"
-                    href="#contact">Devis Gratuit</a>
+                <a class="text-center rounded-lg py-3 bg-primary text-white font-bold shadow-md block" href="#contact">
+                    Devis Gratuit
+                </a>
             </div>
         </div>
     </header>
-
     <main class="flex flex-col w-full">
-        <!-- 5. Optimisation MAJEURE : Remplacement du background-image CSS par une balise IMG pour le LCP -->
-        <section class="relative w-full overflow-hidden min-h-[600px] flex items-center justify-center">
-            <!-- Image de fond Hero -->
-            <div class="absolute inset-0 z-0">
-                <!-- Overlay sombre -->
-                <div class="absolute inset-0 bg-slate-900/60 z-10"
-                    style="background: linear-gradient(to right bottom, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6))">
+        <section class="relative w-full overflow-hidden">
+            <div class="relative flex min-h-[600px] flex-col items-center justify-center p-6 bg-cover bg-center bg-no-repeat"
+                style='background-image: linear-gradient(to right bottom, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaEc-Hk-iPi6W0foJx-P9_I-_8Nx7W1ggxOIY5xV1549Tdv0NbV0pVfI0tc30RoNTleczwEonziv531lUTHAWYF2k1w545wXlkv7o9f3TIOp_D6femMwqiSeWMDn3prU_wgq0XpA12slb5-edDydZaqDzuyWEEs8UbJcqapiSRWFmwymIfOBdNm66ahwkcUeKL4ttqErFUuFmrvGoAcDRf8sPaK3G8RfC8L8wWA2aTwQayGtu-gaP1mJdPc3k42kZIIWtuPw8Kii-2");'>
+                <div class="flex flex-col gap-8 text-center max-w-[900px] z-10">
+                    <span
+                        class="inline-flex mx-auto px-4 py-2 bg-white/20 border border-white/30 rounded-full text-white text-sm font-bold uppercase tracking-wide backdrop-blur-md shadow-lg">
+                        <span class="material-symbols-outlined text-sm mr-2">home</span>
+                        Rénovation &amp; Construction
+                    </span>
+                    <h1
+                        class="text-white text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-sm">
+                        Donnez vie à votre <br /><span class="text-primary">maison de rêve</span> en Alsace
+                    </h1>
+                    <h2
+                        class="text-slate-100 text-lg md:text-xl font-medium leading-relaxed max-w-[700px] mx-auto opacity-90">
+                        Nous accompagnons les familles dans leurs projets de rénovation et d'agrandissement.
+                        Un service clé en main, fiable et chaleureux.
+                    </h2>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+                        <a class="flex items-center justify-center rounded-full h-14 px-8 bg-primary hover:bg-[#e07515] transition-all shadow-lg shadow-primary/40 text-white text-lg font-bold transform hover:-translate-y-1"
+                            href="#contact">
+                            Discuter de mon projet
+                        </a>
+                        <a href="tel:0761340048"
+                            class="flex items-center justify-center rounded-full h-14 px-8 bg-white hover:bg-slate-50 text-slate-900 text-lg font-bold transition-all shadow-lg transform hover:-translate-y-1">
+                            <span class="material-symbols-outlined mr-2 text-primary">call</span>
+                            07 61 34 00 48
+                        </a>
+                    </div>
                 </div>
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaEc-Hk-iPi6W0foJx-P9_I-_8Nx7W1ggxOIY5xV1549Tdv0NbV0pVfI0tc30RoNTleczwEonziv531lUTHAWYF2k1w545wXlkv7o9f3TIOp_D6femMwqiSeWMDn3prU_wgq0XpA12slb5-edDydZaqDzuyWEEs8UbJcqapiSRWFmwymIfOBdNm66ahwkcUeKL4ttqErFUuFmrvGoAcDRf8sPaK3G8RfC8L8wWA2aTwQayGtu-gaP1mJdPc3k42kZIIWtuPw8Kii-2"
-                    alt="Rénovation maison Alsace" class="w-full h-full object-cover" fetchpriority="high" width="1920"
-                    height="1080">
-            </div>
-
-            <div class="relative z-20 flex flex-col gap-8 text-center max-w-[900px] p-6">
-                <span
-                    class="inline-flex mx-auto px-4 py-2 bg-white/20 border border-white/30 rounded-full text-white text-sm font-bold uppercase tracking-wide backdrop-blur-md shadow-lg">
-                    <span class="material-symbols-outlined text-sm mr-2">home</span>
-                    Rénovation &amp; Construction
-                </span>
-                <h1
-                    class="text-white text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-sm">
-                    Donnez vie à votre <br /><span class="text-primary">maison de rêve</span> en Alsace
-                </h1>
-                <h2
-                    class="text-slate-100 text-lg md:text-xl font-medium leading-relaxed max-w-[700px] mx-auto opacity-90">
-                    Nous accompagnons les familles dans leurs projets de rénovation et d'agrandissement.
-                    Un service clé en main, fiable et chaleureux.
-                </h2>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                    <a class="flex items-center justify-center rounded-full h-14 px-8 bg-primary hover:bg-[#e07515] transition-all shadow-lg shadow-primary/40 text-white text-lg font-bold transform hover:-translate-y-1"
-                        href="#contact">
-                        Discuter de mon projet
-                    </a>
-                    <a href="tel:0761340048"
-                        class="flex items-center justify-center rounded-full h-14 px-8 bg-white hover:bg-slate-50 text-slate-900 text-lg font-bold transition-all shadow-lg transform hover:-translate-y-1">
-                        <span class="material-symbols-outlined mr-2 text-primary">call</span>
-                        07 61 34 00 48
-                    </a>
-                </div>
-            </div>
-
-            <!-- Courbe décorative en SVG (plus légère) -->
-            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
-                <div class="h-16 md:h-24 bg-cool-gray" style="clip-path: ellipse(60% 100% at 50% 100%);"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-cool-gray"
+                    style="clip-path: ellipse(60% 100% at 50% 100%);"></div>
             </div>
         </section>
-
         <section class="py-20 px-4 bg-cool-gray" id="services">
             <div class="layout-container max-w-[1280px] mx-auto flex flex-col gap-12">
                 <div class="flex flex-col items-center text-center gap-3">
@@ -349,23 +365,23 @@
                         class="text-primary font-bold text-sm tracking-widest uppercase bg-primary-light px-3 py-1 rounded-full">
                         Nos Expertises</h2>
                     <h3 class="text-slate-dark text-3xl md:text-5xl font-extrabold">Pour chaque pièce de la maison</h3>
-                    <p class="text-slate-500 max-w-[600px] text-lg mt-2">Des solutions esthétiques et durables pour
-                        transformer votre intérieur.</p>
+                    <p class="text-slate-500 max-w-[600px] text-lg mt-2">
+                        Des solutions esthétiques et durables pour transformer votre intérieur.
+                    </p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service 1 -->
                     <div
                         class="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-56 overflow-hidden relative">
-                            <!-- 6. Optimisation : Image WebP, Taille définie, loading lazy -->
+                        <div class="h-56 overflow-hidden">
                             <img alt="Rénovation Générale d'une maison en Alsace"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="Renovation.webp" loading="lazy" width="400" height="224" />
+                                src="Renovation.jpg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary">handyman</span> Rénovation Générale
+                                <span class="material-symbols-outlined text-primary">handyman</span>
+                                Rénovation Générale
                             </h4>
                             <p class="text-slate-500 leading-relaxed">Du sol au plafond, nous gérons l'intégralité de
                                 votre chantier pour une tranquillité d'esprit totale.</p>
@@ -375,18 +391,18 @@
                             </a>
                         </div>
                     </div>
-
                     <!-- Service 2 -->
                     <div
                         class="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-56 overflow-hidden relative">
+                        <div class="h-56 overflow-hidden">
                             <img alt="Peinture et Décoration intérieure professionnelle"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="peinture.webp" loading="lazy" width="400" height="224" />
+                                src="peinture.jpg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary">palette</span> Peinture &amp; Déco
+                                <span class="material-symbols-outlined text-primary">palette</span>
+                                Peinture &amp; Déco
                             </h4>
                             <p class="text-slate-500 leading-relaxed">Couleurs douces, finitions soignées et enduits
                                 décoratifs pour créer l'ambiance qui vous ressemble.</p>
@@ -396,19 +412,18 @@
                             </a>
                         </div>
                     </div>
-
                     <!-- Service 3 -->
                     <div
                         class="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-56 overflow-hidden relative">
+                        <div class="h-56 overflow-hidden">
                             <img alt="Pose de sols et parquets en bois"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="Sols&Carrelage.webp" loading="lazy" width="400" height="224" />
+                                src="Sols&Carrelage.png" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary">grid_view</span> Sols &amp;
-                                Carrelage
+                                <span class="material-symbols-outlined text-primary">grid_view</span>
+                                Sols &amp; Carrelage
                             </h4>
                             <p class="text-slate-500 leading-relaxed">Pose de parquets chaleureux, carrelages modernes
                                 et sols adaptés à la life de famille.</p>
@@ -418,19 +433,18 @@
                             </a>
                         </div>
                     </div>
-
                     <!-- Service 4 -->
                     <div
                         class="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-56 overflow-hidden relative">
+                        <div class="h-56 overflow-hidden">
                             <img alt="Maçonnerie et extension de maison"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="Maçonnerie&Extension.webp" loading="lazy" width="400" height="224" />
+                                src="Maçonnerie&Extension.jpg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary">foundation</span> Maçonnerie &amp;
-                                Extension
+                                <span class="material-symbols-outlined text-primary">foundation</span>
+                                Maçonnerie &amp; Extension
                             </h4>
                             <p class="text-slate-500 leading-relaxed">Ouverture de murs, agrandissements ou aménagement
                                 extérieur pour gagner de l'espace.</p>
@@ -440,19 +454,18 @@
                             </a>
                         </div>
                     </div>
-
                     <!-- Service 5 -->
                     <div
                         class="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-56 overflow-hidden relative">
+                        <div class="h-56 overflow-hidden">
                             <img alt="Isolation thermique extérieure et intérieure"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="isolation-thermique-maison.webp" loading="lazy" width="400" height="224" />
+                                src="isolation-thermique-maison.jpeg" loading="lazy" width="400" height="300" />
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary">home_work</span> Isolation
-                                Thermique
+                                <span class="material-symbols-outlined text-primary">home_work</span>
+                                Isolation Thermique
                             </h4>
                             <p class="text-slate-500 leading-relaxed">Améliorez le confort de votre foyer été comme
                                 hiver et réduisez vos factures.</p>
@@ -462,21 +475,21 @@
                             </a>
                         </div>
                     </div>
-
                     <!-- Service 6 -->
                     <div
                         class="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-56 overflow-hidden relative">
+                        <div class="h-56 overflow-hidden">
+                            <!-- Placeholder image, user to replace -->
                             <div class="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
-                                <img alt="Rénovation Salle de Bain"
+                                <img alt="Isolation thermique extérieure et intérieure"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    src="revetement-sol-salle-de-bain.webp" loading="lazy" width="400" height="224" />
+                                    src="revetement-sol-salle-de-bain.avif" loading="lazy" width="400" height="300" />
                             </div>
                         </div>
                         <div class="p-8 flex flex-col gap-3">
                             <h4 class="text-slate-dark text-xl font-bold flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary">water_drop</span> Revêtement
-                                Cuisine & SDB
+                                <span class="material-symbols-outlined text-primary">water_drop</span>
+                                Revêtement Cuisine & SDB
                             </h4>
                             <p class="text-slate-500 leading-relaxed">Rénovation complète des pièces d'eau : carrelage,
                                 faïence et étanchéité soignée.</p>
@@ -486,10 +499,11 @@
                             </a>
                         </div>
                     </div>
-
                     <!-- Call to Action Card -->
+                    <!-- Call to Action Card (Full Width) -->
                     <div
                         class="md:col-span-2 lg:col-span-3 relative overflow-hidden group rounded-3xl bg-slate-900 shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+                        <!-- Decorative background -->
                         <div
                             class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-500 transform translate-x-1/2 -translate-y-1/2">
                         </div>
@@ -520,15 +534,15 @@
                 </div>
             </div>
         </section>
-
         <section class="py-20 px-4 bg-white" id="about">
             <div class="layout-container max-w-[1280px] mx-auto">
                 <div class="flex flex-col md:flex-row gap-16 items-center">
                     <div class="flex-1 flex flex-col gap-8">
                         <div class="flex flex-col gap-3">
                             <h2 class="text-primary font-bold text-sm tracking-widest uppercase">Nos Valeurs</h2>
-                            <h3 class="text-slate-dark text-3xl md:text-4xl font-extrabold leading-tight">Une entreprise
-                                locale à votre écoute</h3>
+                            <h3 class="text-slate-dark text-3xl md:text-4xl font-extrabold leading-tight">
+                                Une entreprise locale à votre écoute
+                            </h3>
                             <p class="text-slate-500 text-lg leading-relaxed">
                                 Chez AD BTP, nous savons que des travaux sont une étape importante pour votre famille.
                                 C'est pourquoi nous privilégions la transparence et le respect des lieux.
@@ -563,7 +577,8 @@
                                         class="text-lg font-bold text-slate-dark group-hover:text-primary transition-colors">
                                         Matériaux Sains</h4>
                                     <p class="text-slate-500 text-sm mt-1">Priorité aux matériaux durables et
-                                        respectueux de la santé de votre famille.</p>
+                                        respectueux de
+                                        la santé de votre famille.</p>
                                 </div>
                             </div>
 
@@ -579,7 +594,8 @@
                                         class="text-lg font-bold text-slate-dark group-hover:text-primary transition-colors">
                                         Confiance Absolue</h4>
                                     <p class="text-slate-500 text-sm mt-1">Devis clair, délais respectés et chantier
-                                        nettoyé chaque jour.</p>
+                                        nettoyé
+                                        chaque jour.</p>
                                 </div>
                             </div>
                         </div>
@@ -592,7 +608,6 @@
                             style="animation-delay: 1.5s;"></div>
                         <div
                             class="relative rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white transform hover:scale-[1.01] transition-transform duration-500">
-                            <!-- Image optimisée -->
                             <img alt="Equipe AD BTP au travail en Alsace" class="w-full h-auto object-cover"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtWpFxa-r0sQJ5-LDTH0LtW8gpzD4LUlM1WKKkc3fwpkCDJ21t8pxKnPAsrSips8ta26nxRxiFNBzG9GYT-jOLAVrQzu8qNgbIhgaH8OP4XGmvCdzbklUTBdPorf9hy2X1jIURJ5mHgtRL4la1tGCV_DC3NR3wEhxEf3vlkhIOZhVOF1mKiJ13IFPmXkcaKQmktlt-OSADpSWSrqNVr6RUrWh9VBDSqDtwAxFkbLSRxfjrGyLkPTPMrRIRytsF4a5FN_QtZsTHaVBr"
                                 loading="lazy" width="600" height="400" />
@@ -601,7 +616,6 @@
                 </div>
             </div>
         </section>
-
         <section class="py-20 px-4 bg-slate-50" id="reviews">
             <div class="layout-container max-w-[1280px] mx-auto flex flex-col gap-12">
                 <div class="text-center max-w-[600px] mx-auto">
@@ -617,15 +631,15 @@
                             <span class="material-symbols-outlined text-6xl">format_quote</span>
                         </div>
                         <div class="flex text-yellow-400 mb-4">
-                            <span class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
                         </div>
                         <p class="text-slate-600 italic relative z-10">"AD BTP a refait toute notre salle de bain. Le
-                            résultat est magnifique et l'équipe était très discrète et polie. Je recommande pour les
-                            familles !"</p>
+                            résultat est
+                            magnifique et l'équipe était très discrète et polie. Je recommande pour les familles !"</p>
                         <div class="flex items-center gap-3 mt-auto pt-6 border-t border-slate-100">
                             <div
                                 class="w-12 h-12 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-slate-600 font-bold shadow-inner">
@@ -644,14 +658,15 @@
                             <span class="material-symbols-outlined text-6xl">format_quote</span>
                         </div>
                         <div class="flex text-yellow-400 mb-4">
-                            <span class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
                         </div>
                         <p class="text-slate-600 italic relative z-10">"Excellent travail pour l'isolation extérieure.
-                            Nous avons déjà senti la différence de température. Merci pour le professionnalisme."</p>
+                            Nous avons déjà
+                            senti la différence de température. Merci pour le professionnalisme."</p>
                         <div class="flex items-center gap-3 mt-auto pt-6 border-t border-slate-100">
                             <div
                                 class="w-12 h-12 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-slate-600 font-bold shadow-inner">
@@ -670,14 +685,15 @@
                             <span class="material-symbols-outlined text-6xl">format_quote</span>
                         </div>
                         <div class="flex text-yellow-400 mb-4">
-                            <span class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined fill-current">star</span><span
-                                class="material-symbols-outlined text-slate-300">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined text-slate-300">star</span>
                         </div>
                         <p class="text-slate-600 italic relative z-10">"Rénovation du salon rapide et propre. Les délais
-                            ont été tenus, ce qui est rare ! Très satisfaits de notre nouveau carrelage."</p>
+                            ont été
+                            tenus, ce qui est rare ! Très satisfaits de notre nouveau carrelage."</p>
                         <div class="flex items-center gap-3 mt-auto pt-6 border-t border-slate-100">
                             <div
                                 class="w-12 h-12 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-slate-600 font-bold shadow-inner">
@@ -691,10 +707,10 @@
                 </div>
             </div>
         </section>
-
         <section class="py-16 px-4 bg-white">
             <div
                 class="layout-container max-w-[1000px] mx-auto bg-white rounded-3xl p-4 md:p-8 flex flex-col md:flex-row gap-8 items-center border border-slate-100 shadow-2xl relative overflow-hidden group">
+                <!-- Decorative background elements -->
                 <div
                     class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500">
                 </div>
@@ -725,7 +741,6 @@
                 </div>
                 <div
                     class="w-full md:w-1/2 h-[300px] rounded-2xl overflow-hidden relative shadow-lg border-4 border-white transform transition-transform duration-500 hover:scale-[1.02]">
-                    <!-- 7. Optimisation : Loading Lazy sur la carte -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d683467.4988780655!2d6.985959350000001!3d48.24647315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2c1%3A0xaca324a331a61a0!2sAlsace!5e0!3m2!1sfr!2sfr!4v1705570000000!5m2!1sfr!2sfr"
                         width="100%" height="100%" style="border:0; filter: grayscale(10%) contrast(1.1);"
@@ -735,7 +750,6 @@
                 </div>
             </div>
         </section>
-
         <section class="py-20 px-4 bg-cool-gray" id="contact">
             <div class="layout-container max-w-[1280px] mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -751,6 +765,7 @@
                             </p>
                         </div>
                         <div class="flex flex-col gap-5">
+                            <!-- Clickable Phone Card -->
                             <a href="tel:0761340048"
                                 class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-50 flex items-center gap-5 group cursor-pointer hover:-translate-y-1 block">
                                 <div
@@ -766,6 +781,7 @@
                                 </div>
                             </a>
 
+                            <!-- Clickable Email Card -->
                             <a href="mailto:ad.batiment67@gmail.com"
                                 class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-50 flex items-center gap-5 group cursor-pointer hover:-translate-y-1 block">
                                 <div
@@ -784,6 +800,7 @@
                         class="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border-t-8 border-primary relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-bl-full pointer-events-none">
                         </div>
+                        <!-- Form configured for Formspree -->
                         <form class="flex flex-col gap-5 relative z-10" action="https://formspree.io/f/xgoolkzd"
                             method="POST">
                             <h4 class="text-xl font-bold text-slate-dark mb-2">Envoyez-nous un message</h4>
@@ -816,13 +833,14 @@
                             </div>
                             <button
                                 class="mt-2 bg-primary hover:bg-[#e07515] text-white font-bold text-lg py-4 rounded-xl shadow-xl shadow-primary/30 transition-all transform hover:scale-[1.02] active:scale-95"
-                                type="submit">Envoyer ma demande</button>
+                                type="submit">
+                                Envoyer ma demande
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-
         <footer class="bg-slate-900 text-white pt-20 pb-10 rounded-t-[3rem] mt-8" id="footer-main">
             <div class="layout-container max-w-[1280px] mx-auto px-6 flex flex-col gap-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -830,8 +848,8 @@
                         <a href="#" class="flex items-center gap-3 group transition-all">
                             <div
                                 class="flex items-center justify-center w-14 h-14 group-hover:scale-105 transition-transform duration-300">
-                                <!-- Logo WebP -->
-                                <img src="logo.webp" alt="AD BTP Logo" class="w-full h-full object-contain" width="56"
+                                <!-- Logo Integration using circular logo.png -->
+                                <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain" width="56"
                                     height="56">
                             </div>
                             <div class="flex flex-col">
@@ -879,14 +897,21 @@
                         <h4 class="text-lg font-bold text-white border-l-4 border-primary pl-3">Liens Rapides</h4>
                         <div class="flex flex-col gap-3">
                             <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
-                                href="#services"><span class="w-1 h-1 rounded-full bg-primary"></span> Nos Services</a>
+                                href="#services">
+                                <span class="w-1 h-1 rounded-full bg-primary"></span> Nos Services
+                            </a>
                             <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
-                                href="#about"><span class="w-1 h-1 rounded-full bg-primary"></span> A Propos</a>
+                                href="#about">
+                                <span class="w-1 h-1 rounded-full bg-primary"></span> A Propos
+                            </a>
                             <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
-                                href="#reviews"><span class="w-1 h-1 rounded-full bg-primary"></span> Avis Clients</a>
+                                href="#reviews">
+                                <span class="w-1 h-1 rounded-full bg-primary"></span> Avis Clients
+                            </a>
                             <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
-                                href="mentions-legales.html"><span class="w-1 h-1 rounded-full bg-primary"></span>
-                                Mentions Légales</a>
+                                href="mentions-legales.html">
+                                <span class="w-1 h-1 rounded-full bg-primary"></span> Mentions Légales
+                            </a>
                         </div>
                     </div>
                     <div class="flex flex-col gap-6">
@@ -894,13 +919,15 @@
                         <p class="text-sm text-slate-400">Laissez votre email, nous vous rappelons pour parler de votre
                             projet.</p>
                         <form class="flex flex-col gap-3" action="https://formspree.io/f/xgoolkzd" method="POST">
+                            <!-- Hidden field to identify the form in Formspree -->
                             <input type="hidden" name="_subject" value="Nouveau Devis Rapide (Footer)">
                             <input name="email"
                                 class="bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-slate-500"
                                 placeholder="Votre email..." type="email" required />
                             <button
-                                class="bg-primary hover:bg-[#e07515] text-white font-bold text-sm py-3 rounded-lg transition-colors shadow-lg shadow-primary/20">Être
-                                rappelé</button>
+                                class="bg-primary hover:bg-[#e07515] text-white font-bold text-sm py-3 rounded-lg transition-colors shadow-lg shadow-primary/20">
+                                Être rappelé
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -912,6 +939,7 @@
                             href="https://www.facebook.com/profile.php?id=61557142179654" target="_blank"
                             rel="noopener noreferrer">
                             <span class="sr-only">Facebook</span>
+                            <!-- SVG Icon -->
                             <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path clip-rule="evenodd"
                                     d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
@@ -924,12 +952,14 @@
         </footer>
     </main>
 
+    <!-- Floating Phone Button -->
     <a href="tel:0761340048" id="floating-phone-btn"
         class="fixed bottom-6 right-6 z-50 group flex items-center bg-primary hover:bg-[#e07515] text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform translate-y-24 opacity-0 border-4 border-white/20">
         <span class="material-symbols-outlined text-3xl animate-pulse">call</span>
         <span class="phone-btn-text font-bold text-lg">07 61 34 00 48</span>
     </a>
 
+    <!-- Scroll to Top Button -->
     <button id="scroll-to-top"
         class="fixed bottom-6 right-6 z-40 bg-slate-800 text-white p-3 rounded-full shadow-lg opacity-0 translate-y-10 transition-all duration-300 hover:bg-primary focus:outline-none hidden"
         aria-label="Retour en haut">
@@ -937,27 +967,31 @@
     </button>
 
     <script>
-        // 8. Optimisation : JS optimisé pour l'écran de chargement
+        // Loading Screen Logic
         window.addEventListener('load', () => {
             const loadingScreen = document.getElementById('loading-screen');
-            // Suppression plus rapide pour améliorer la perception de vitesse
+            // Reduced delay for faster content visibility
             setTimeout(() => {
                 loadingScreen.classList.add('hidden');
             }, 300);
         });
 
-        // Mobile Menu
+        // Mobile Menu Logic
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
 
-        // Scroll Logic optimisé
+        // Floating Phone Button Logic with optimized scroll handler
         const phoneBtn = document.getElementById('floating-phone-btn');
+        const scrollBtn = document.getElementById('scroll-to-top');
+
         let ticking = false;
 
         function updateScrollElements() {
+            // Phone button logic (shows after 300px)
             if (window.scrollY > 300) {
                 phoneBtn.classList.remove('translate-y-24', 'opacity-0');
             } else {
@@ -973,16 +1007,19 @@
             }
         }, { passive: true });
 
-        // Smooth scroll
+
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                menu.classList.add('hidden');
+                menu.classList.add('hidden'); // Close mobile menu if open
                 const targetId = this.getAttribute('href');
                 if (targetId && targetId !== '#') {
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
                     }
                 }
             });
