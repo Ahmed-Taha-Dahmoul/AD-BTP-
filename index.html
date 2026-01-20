@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <link rel="icon" href="logo.png" type="image/png">
 
     <!-- SEO Meta Tags -->
     <title>AD BTP - Rénovation & Construction en Alsace </title>
@@ -39,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "AD BTP",
-      "image": "https://ad-btp.fr/logo.jpg",
+      "image": "https://ad-btp.fr/logo.png",
       "telephone": "+33761340048",
       "email": "ad.batiment67@gmail.com",
       "url": "https://ad-btp.fr",
@@ -143,14 +143,21 @@
         class="sticky top-0 z-50 w-full bg-slate-900/95 backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300">
         <div class="flex flex-col mx-auto w-full px-4 md:px-8 lg:px-12">
             <div class="flex items-center justify-between whitespace-nowrap py-3">
-                <div class="flex items-center gap-3">
+                <a href="#" class="flex items-center gap-3 group transition-all">
                     <div
-                        class="flex items-center justify-center bg-white rounded-full w-12 h-12 text-white shadow-md overflow-hidden border-2 border-primary">
-                        <!-- Logo Integration -->
-                        <img src="logo.jpg" alt="AD BTP Logo" class="w-full h-full object-cover">
+                        class="flex items-center justify-center w-12 h-12 group-hover:scale-105 transition-transform duration-300">
+                        <!-- Logo Integration using circular logo.png -->
+                        <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain">
                     </div>
-                    <h2 class="text-white text-2xl font-extrabold tracking-tight">AD BTP</h2>
-                </div>
+                    <div class="flex flex-col">
+                        <h2
+                            class="text-white text-lg md:text-xl font-black tracking-tighter leading-none group-hover:text-primary transition-colors uppercase">
+                            AD BTP</h2>
+                        <span
+                            class="text-primary text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase mt-1 opacity-90">Travaux
+                            & Rénovation</span>
+                    </div>
+                </a>
                 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                     <div class="flex items-center gap-8">
                         <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
@@ -291,7 +298,7 @@
                                 Sols &amp; Carrelage
                             </h4>
                             <p class="text-slate-500 leading-relaxed">Pose de parquets chaleureux, carrelages modernes
-                                et sols adaptés à la vie de famille.</p>
+                                et sols adaptés à la life de famille.</p>
                             <a class="text-primary font-bold text-sm mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all"
                                 href="#contact">
                                 Demander un devis <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -709,14 +716,20 @@
             <div class="layout-container max-w-[1280px] mx-auto px-6 flex flex-col gap-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <div class="flex flex-col gap-6">
-                        <div class="flex items-center gap-3">
+                        <a href="#" class="flex items-center gap-3 group transition-all">
                             <div
-                                class="flex items-center justify-center bg-white rounded-full w-12 h-12 text-white overflow-hidden border-2 border-primary">
-                                <!-- Logo Integration -->
-                                <img src="logo.jpg" alt="AD BTP Logo" class="w-full h-full object-cover">
+                                class="flex items-center justify-center w-14 h-14 group-hover:scale-105 transition-transform duration-300">
+                                <!-- Logo Integration using circular logo.png -->
+                                <img src="logo.png" alt="AD BTP Logo" class="w-full h-full object-contain">
                             </div>
-                            <h2 class="text-white text-2xl font-bold">AD BTP</h2>
-                        </div>
+                            <div class="flex flex-col">
+                                <h2
+                                    class="text-white text-xl font-black tracking-tighter leading-none group-hover:text-primary transition-colors uppercase">
+                                    AD BTP</h2>
+                                <span
+                                    class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mt-1 opacity-90">Alsace</span>
+                            </div>
+                        </a>
                         <p class="text-slate-400 leading-relaxed">
                             Le partenaire de confiance pour les travaux de votre maison en Alsace. Qualité artisanale et
                             service humain.
