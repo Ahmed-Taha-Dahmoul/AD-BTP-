@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ad-btp.fr/sitemap.xml
+Sitemap: https://adbtp24.fr/sitemap.xml
