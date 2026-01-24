@@ -131,8 +131,9 @@
     <!-- Resource Hints for Performance -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
     <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+
+    <link href="./dist/styles.css" rel="stylesheet" />
 
     <!-- Preload Critical Fonts -->
     <link rel="preload" as="style"
@@ -157,30 +158,6 @@
     <link rel="preload" as="image"
         href="https://lh3.googleusercontent.com/aida-public/AB6AXuBaEc-Hk-iPi6W0foJx-P9_I-_8Nx7W1ggxOIY5xV1549Tdv0NbV0pVfI0tc30RoNTleczwEonziv531lUTHAWYF2k1w545wXlkv7o9f3TIOp_D6femMwqiSeWMDn3prU_wgq0XpA12slb5-edDydZaqDzuyWEEs8UbJcqapiSRWFmwymIfOBdNm66ahwkcUeKL4ttqErFUuFmrvGoAcDRf8sPaK3G8RfC8L8wWA2aTwQayGtu-gaP1mJdPc3k42kZIIWtuPw8Kii-2"
         fetchpriority="high" />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f48525",
-                        "primary-light": "#fff1e6",
-                        "cool-gray": "#f0f4f8",
-                        "slate-dark": "#1e293b",
-                        "slate-med": "#334155",
-                        "soft-blue": "#e2e8f0",
-                    },
-                    fontFamily: {
-                        "sans": ["Nunito", "sans-serif"],
-                        "display": ["Nunito", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
     <style>
         body {
             font-family: "Nunito", sans-serif;
@@ -381,7 +358,7 @@
                 style='background-image: linear-gradient(to right bottom, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaEc-Hk-iPi6W0foJx-P9_I-_8Nx7W1ggxOIY5xV1549Tdv0NbV0pVfI0tc30RoNTleczwEonziv531lUTHAWYF2k1w545wXlkv7o9f3TIOp_D6femMwqiSeWMDn3prU_wgq0XpA12slb5-edDydZaqDzuyWEEs8UbJcqapiSRWFmwymIfOBdNm66ahwkcUeKL4ttqErFUuFmrvGoAcDRf8sPaK3G8RfC8L8wWA2aTwQayGtu-gaP1mJdPc3k42kZIIWtuPw8Kii-2");'>
                 <div class="flex flex-col gap-8 text-center max-w-[900px] z-10">
                     <span
-                        class="inline-flex mx-auto px-4 py-2 bg-white/20 border border-white/30 rounded-full text-white text-sm font-bold uppercase tracking-wide backdrop-blur-md shadow-lg">
+                        class="inline-flex items-center mx-auto px-4 py-2 bg-white/20 border border-white/30 rounded-full text-white text-sm font-bold uppercase tracking-wide backdrop-blur-md shadow-lg">
                         <span class="material-symbols-outlined text-sm mr-2">verified</span>
                         Expert BTP &amp; Rénovation 67/68
                     </span>
