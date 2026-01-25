@@ -4,11 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Correction de l'erreur Bing : Ajout de la description -->
+    <meta name="description"
+        content="Mentions légales de l'entreprise AD BTP, spécialiste de la rénovation et construction en Alsace. Informations juridiques et contacts." />
+
+    <!-- On empêche Google d'indexer cette page inutilement (Optionnel mais recommandé) -->
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>Mentions Légales - AD BTP</title>
-    <link rel="icon" href="logo.jpg" type="image/jpeg">
-    <link href="./dist/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Favicon corrigé -->
+    <link rel="icon" href="logo_favicon.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="logo_favicon.png">
+
+    <!-- Tailwind CSS (Pour le style) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
         body {
             font-family: "Nunito", sans-serif;
         }
@@ -25,21 +39,30 @@
             confiance en l'économie numérique, il est précisé aux utilisateurs du site AD BTP l'identité des différents
             intervenants dans le cadre de sa réalisation et de son suivi.</p>
 
-        <h2 class="text-xl font-bold mt-8 mb-4">Edition du site</h2>
-        <p class="mb-2">Le présent site, accessible à l’URL ad-btp.fr (le « Site »), est édité par :</p>
+        <h2 class="text-xl font-bold mt-8 mb-4">1. Edition du site</h2>
+        <p class="mb-2">Le présent site, accessible à l’URL <strong>adbtp24.fr</strong> (le « Site »), est édité par :
+        </p>
         <p class="mb-4 font-semibold">AD BTP (Entreprise Individuelle)</p>
-        <p class="mb-2">SIRET : [NUMÉRO SIRET À COMPLÉTER]</p>
-        <p class="mb-2">Adresse : [ADRESSE À COMPLÉTER], Alsace, France</p>
 
-        <h2 class="text-xl font-bold mt-8 mb-4">Hébergement</h2>
-        <p class="mb-4">Le Site est hébergé par : [NOM DE L'HÉBERGEUR], situé au [ADRESSE HÉBERGEUR].</p>
+        <!-- ATTENTION : VOUS DEVEZ REMPLIR VOTRE SIRET ET ADRESSE ICI -->
 
-        <h2 class="text-xl font-bold mt-8 mb-4">Responsable de publication</h2>
+
+        <p class="mb-2"><strong>SIRET :</strong> 85621426200018</p>
+        <p class="mb-2"><strong>Adresse :</strong> Strasbourg, Alsace, France</p>
+
+
+        <h2 class="text-xl font-bold mt-8 mb-4">2. Hébergement</h2>
+        <p class="mb-4">Le Site est hébergé par : <strong>GitHub Inc.</strong><br>
+            situé au 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
+
+        <h2 class="text-xl font-bold mt-8 mb-4">3. Responsable de publication</h2>
         <p class="mb-4">Directeur de la publication : AD BTP</p>
 
-        <h2 class="text-xl font-bold mt-8 mb-4">Nous contacter</h2>
-        <p class="mb-2">Par téléphone : 07 61 34 00 48</p>
-        <p class="mb-2">Par email : ad.batiment67@gmail.com</p>
+        <h2 class="text-xl font-bold mt-8 mb-4">4. Nous contacter</h2>
+        <p class="mb-2">Par téléphone : <a href="tel:0761340048" class="text-orange-600 font-bold">07 61 34 00 48</a>
+        </p>
+        <p class="mb-2">Par email : <a href="mailto:ad.batiment67@gmail.com"
+                class="text-orange-600 font-bold">ad.batiment67@gmail.com</a></p>
     </div>
 </body>
 
