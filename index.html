@@ -363,6 +363,8 @@
                         <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
                             href="#services">Nos Services</a>
                         <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
+                            href="#realisations">Nos Réalisations</a>
+                        <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
                             href="#about">L'Entreprise</a>
                         <a class="text-slate-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all text-base font-bold"
                             href="#reviews">Avis Clients</a>
@@ -380,11 +382,12 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu (Hidden by default) -->
             <div id="mobile-menu"
                 class="hidden md:hidden bg-slate-800 border-t border-slate-700 shadow-xl px-4 py-4 flex flex-col gap-4 rounded-b-2xl">
                 <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
                     href="#services">Nos Services</a>
+                <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
+                    href="#realisations">Nos Réalisations</a>
                 <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
                     href="#about">L'Entreprise</a>
                 <a class="text-slate-300 hover:text-white font-bold block py-2 px-2 hover:bg-slate-700 rounded transition-colors"
@@ -606,6 +609,151 @@
                 </div>
             </div>
         </section>
+
+        <section class="py-20 px-4 bg-slate-50" id="realisations">
+            <div class="layout-container max-w-[1280px] mx-auto flex flex-col gap-12">
+                <div class="flex flex-col items-center text-center gap-3">
+                    <h2 class="text-primary font-bold text-sm tracking-widest uppercase bg-primary-light px-3 py-1 rounded-full">Nos Réalisations</h2>
+                    <h3 class="text-slate-dark text-3xl md:text-5xl font-extrabold">Avant / Après</h3>
+                    <p class="text-slate-500 max-w-[600px] text-lg mt-2">
+                        Découvrez la transformation de nos chantiers. Cliquez sur un projet pour voir les détails !
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer h-[350px] border border-slate-200 hover:border-primary/50 transition-colors" onclick="openModal('cham')">
+                        <!-- AFTER (Couleur, Droite/Dessous) -->
+                        <div class="absolute inset-0 right-0 z-0">
+                            <img src="work_photos/cham_result_1_Blaesheim.jfif" alt="Chantier Blaesheim Après" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="absolute top-4 right-4 z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Après</span>
+                        
+                        <!-- BEFORE (Noir&Blanc, Gauche/Dessus) -->
+                        <div class="absolute inset-0 z-10 split-clip group-hover:opacity-95 transition-opacity duration-300">
+                            <img src="work_photos/cham_Blaesheim.jfif" alt="Chantier Blaesheim Avant" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 shadow-[inset_-10px_0_20px_rgba(0,0,0,0.4)]"></div>
+                        </div>
+                        <span class="absolute top-4 left-4 z-20 bg-slate-900/90 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm border border-slate-700 shadow-lg transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Avant</span>
+                        
+                        <!-- Ligne de séparation -->
+                        <div class="absolute top-0 bottom-0 left-1/2 w-[3px] bg-primary z-20 shadow-[0_0_15px_rgba(244,133,37,1)] group-hover:w-[4px] transition-all duration-300"></div>
+
+                        <!-- Gradient & Info -->
+                        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/95 via-slate-900/50 to-transparent z-30 pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-40 pointer-events-none text-center">
+                            <span class="bg-primary/20 text-primary border border-primary/30 text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full mb-3 inline-block shadow-sm backdrop-blur-md">Rénovation</span>
+                            <h4 class="text-2xl font-bold text-white flex items-center justify-center gap-2 drop-shadow-md">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                                Blaesheim
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer h-[350px] border border-slate-200 hover:border-primary/50 transition-colors" onclick="openModal('dha')">
+                        <div class="absolute inset-0 right-0 z-0">
+                            <img src="work_photos/dha_result_1_Chatenois.jfif" alt="Chantier Chatenois Après" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="absolute top-4 right-4 z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Après</span>
+                        
+                        <div class="absolute inset-0 z-10 split-clip group-hover:opacity-95 transition-opacity duration-300">
+                            <img src="work_photos/dha_Chatenois.jfif" alt="Chantier Chatenois Avant" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 shadow-[inset_-10px_0_20px_rgba(0,0,0,0.4)]"></div>
+                        </div>
+                        <span class="absolute top-4 left-4 z-20 bg-slate-900/90 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm border border-slate-700 shadow-lg transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Avant</span>
+                        
+                        <div class="absolute top-0 bottom-0 left-1/2 w-[3px] bg-primary z-20 shadow-[0_0_15px_rgba(244,133,37,1)] group-hover:w-[4px] transition-all duration-300"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/95 via-slate-900/50 to-transparent z-30 pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-40 pointer-events-none text-center">
+                            <span class="bg-primary/20 text-primary border border-primary/30 text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full mb-3 inline-block shadow-sm backdrop-blur-md">Rénovation</span>
+                            <h4 class="text-2xl font-bold text-white flex items-center justify-center gap-2 drop-shadow-md">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                                Châtenois
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer h-[350px] border border-slate-200 hover:border-primary/50 transition-colors" onclick="openModal('ext_wall')">
+                        <div class="absolute inset-0 right-0 z-0">
+                            <img src="work_photos/ext_wall_result_1_Erstein.jfif" alt="Chantier Erstein Après" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="absolute top-4 right-4 z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Après</span>
+                        
+                        <div class="absolute inset-0 z-10 split-clip group-hover:opacity-95 transition-opacity duration-300">
+                            <img src="work_photos/ext_wall_Erstein.jfif" alt="Chantier Erstein Avant" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 shadow-[inset_-10px_0_20px_rgba(0,0,0,0.4)]"></div>
+                        </div>
+                        <span class="absolute top-4 left-4 z-20 bg-slate-900/90 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm border border-slate-700 shadow-lg transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Avant</span>
+                        
+                        <div class="absolute top-0 bottom-0 left-1/2 w-[3px] bg-primary z-20 shadow-[0_0_15px_rgba(244,133,37,1)] group-hover:w-[4px] transition-all duration-300"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/95 via-slate-900/50 to-transparent z-30 pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-40 pointer-events-none text-center">
+                            <span class="bg-primary/20 text-primary border border-primary/30 text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full mb-3 inline-block shadow-sm backdrop-blur-md">Maçonnerie</span>
+                            <h4 class="text-2xl font-bold text-white flex items-center justify-center gap-2 drop-shadow-md">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                                Erstein
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer h-[350px] border border-slate-200 hover:border-primary/50 transition-colors bg-slate-800" onclick="openModal('sol')">
+                        <!-- Pour la vidéo on utilise un tag vidéo en background -->
+                        <div class="absolute inset-0 right-0 z-0">
+                            <video src="work_photos/sol_result_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"></video>
+                        </div>
+                        <span class="absolute top-4 right-4 z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Après</span>
+                        
+                        <div class="absolute inset-0 z-10 split-clip group-hover:opacity-95 transition-opacity duration-300">
+                            <img src="work_photos/sol.jfif" alt="Sol Avant" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 shadow-[inset_-10px_0_20px_rgba(0,0,0,0.4)]"></div>
+                        </div>
+                        <span class="absolute top-4 left-4 z-20 bg-slate-900/90 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm border border-slate-700 shadow-lg transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Avant</span>
+                        
+                        <div class="absolute top-0 bottom-0 left-1/2 w-[3px] bg-primary z-20 shadow-[0_0_15px_rgba(244,133,37,1)] group-hover:w-[4px] transition-all duration-300"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/95 via-slate-900/50 to-transparent z-30 pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-40 pointer-events-none text-center">
+                            <span class="bg-primary/20 text-primary border border-primary/30 text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full mb-3 inline-block shadow-sm backdrop-blur-md">Sols</span>
+                            <h4 class="text-2xl font-bold text-white flex items-center justify-center gap-2 drop-shadow-md">
+                                <span class="material-symbols-outlined text-primary">build</span>
+                                Réfection de Sol
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer h-[350px] border border-slate-200 hover:border-primary/50 transition-colors" onclick="openModal('wall_garage')">
+                        <div class="absolute inset-0 right-0 z-0">
+                            <img src="work_photos/wall_garage_result_1.jfif" alt="Garage Après" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="absolute top-4 right-4 z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Après</span>
+                        
+                        <div class="absolute inset-0 z-10 split-clip group-hover:opacity-95 transition-opacity duration-300">
+                            <img src="work_photos/wall_grage.jfif" alt="Garage Avant" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 shadow-[inset_-10px_0_20px_rgba(0,0,0,0.4)]"></div>
+                        </div>
+                        <span class="absolute top-4 left-4 z-20 bg-slate-900/90 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm border border-slate-700 shadow-lg transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">Avant</span>
+                        
+                        <div class="absolute top-0 bottom-0 left-1/2 w-[3px] bg-primary z-20 shadow-[0_0_15px_rgba(244,133,37,1)] group-hover:w-[4px] transition-all duration-300"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/95 via-slate-900/50 to-transparent z-30 pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-40 pointer-events-none text-center">
+                            <span class="bg-primary/20 text-primary border border-primary/30 text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full mb-3 inline-block shadow-sm backdrop-blur-md">Aménagement</span>
+                            <h4 class="text-2xl font-bold text-white flex items-center justify-center gap-2 drop-shadow-md">
+                                <span class="material-symbols-outlined text-primary">build</span>
+                                Aménagement Garage
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="py-20 px-4 bg-white" id="about">
             <div class="layout-container max-w-[1280px] mx-auto">
                 <div class="flex flex-col md:flex-row gap-16 items-center">
@@ -1114,6 +1262,47 @@
         </footer>
     </main>
 
+    <style>
+        .split-clip {
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-media-anim { animation: modalFadeIn 0.3s ease-out forwards; }
+    </style>
+
+    <!-- Project Modal Gallery -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-primary bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors z-[110]">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        
+        <div class="w-full max-w-[1200px] h-[80vh] flex flex-col items-center justify-center p-4 relative pt-16">
+            <h3 id="modal-title" class="text-white text-3xl font-bold mb-4 absolute top-0"></h3>
+            
+            <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden rounded-xl shadow-2xl bg-black/50 border border-white/5">
+                <!-- Media will be injected here -->
+                <div id="modal-media-container" class="w-full h-full flex items-center justify-center overflow-hidden"></div>
+                
+                <!-- Status Badge -->
+                <div id="modal-status-badge" class="absolute top-6 left-6 z-10 text-white px-5 py-2 rounded-full text-sm font-bold shadow-2xl uppercase tracking-wider backdrop-blur-md"></div>
+
+                <!-- Nav Buttons -->
+                <button onclick="prevMedia()" class="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-primary bg-black/60 hover:bg-black/90 p-4 rounded-full transition-colors backdrop-blur-md shadow-xl border border-white/10 z-20">
+                    <span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+                </button>
+                <button onclick="nextMedia()" class="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-primary bg-black/60 hover:bg-black/90 p-4 rounded-full transition-colors backdrop-blur-md shadow-xl border border-white/10 z-20">
+                    <span class="material-symbols-outlined text-2xl">arrow_forward_ios</span>
+                </button>
+            </div>
+
+            <!-- Dots -->
+            <div id="modal-dots" class="flex gap-3 mt-6 absolute bottom-2"></div>
+        </div>
+    </div>
+
     <!-- Floating Phone Button -->
     <a href="tel:0761340048" id="floating-phone-btn"
         class="fixed bottom-6 right-6 z-50 group flex items-center bg-primary hover:bg-[#e07515] text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform translate-y-24 opacity-0 border-4 border-white/20">
@@ -1186,6 +1375,123 @@
                 }
             });
         });
+
+        // --- Modal Gallery Logic ---
+        const projectsData = {
+            "cham": {
+                title: "Rénovation Blaesheim",
+                media: [
+                    { type: 'image', src: 'work_photos/cham_Blaesheim.jfif', label: 'Avant' },
+                    { type: 'image', src: 'work_photos/cham_result_1_Blaesheim.jfif', label: 'Après' }
+                ]
+            },
+            "dha": {
+                title: "Rénovation Châtenois",
+                media: [
+                    { type: 'image', src: 'work_photos/dha_Chatenois.jfif', label: 'Avant' },
+                    { type: 'image', src: 'work_photos/dha_result_1_Chatenois.jfif', label: 'Après' }
+                ]
+            },
+            "ext_wall": {
+                title: "Maçonnerie Erstein",
+                media: [
+                    { type: 'image', src: 'work_photos/ext_wall_Erstein.jfif', label: 'Avant' },
+                    { type: 'image', src: 'work_photos/ext_wall_result_1_Erstein.jfif', label: 'Après 1' },
+                    { type: 'video', src: 'work_photos/ext_wall_result_2_Erstein.mp4', label: 'Après (Vidéo)' }
+                ]
+            },
+            "sol": {
+                title: "Réfection de Sol",
+                media: [
+                    { type: 'image', src: 'work_photos/sol.jfif', label: 'Avant' },
+                    { type: 'video', src: 'work_photos/sol_result_1.mp4', label: 'Après (Vidéo)' }
+                ]
+            },
+            "wall_garage": {
+                title: "Aménagement Garage",
+                media: [
+                    { type: 'image', src: 'work_photos/wall_grage.jfif', label: 'Avant' },
+                    { type: 'image', src: 'work_photos/wall_garage_result_1.jfif', label: 'Après 1' },
+                    { type: 'image', src: 'work_photos/wall_garage_result_2.jfif', label: 'Après 2' }
+                ]
+            }
+        };
+
+        const projectModal = document.getElementById('project-modal');
+        const modalContainer = document.getElementById('modal-media-container');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBadge = document.getElementById('modal-status-badge');
+        const modalDots = document.getElementById('modal-dots');
+        
+        let currentProjectModal = null;
+        let currentMediaIndex = 0;
+
+        function openModal(projectId) {
+            currentProjectModal = projectsData[projectId];
+            currentMediaIndex = 0;
+            
+            modalTitle.textContent = currentProjectModal.title;
+            
+            projectModal.classList.remove('hidden');
+            projectModal.classList.add('flex');
+            
+            // Force reflow for fade-in animation
+            void projectModal.offsetWidth;
+            
+            projectModal.classList.remove('opacity-0');
+            
+            document.body.style.overflow = 'hidden';
+            renderMedia();
+        }
+
+        function closeModal() {
+            projectModal.classList.add('opacity-0');
+            setTimeout(() => {
+                projectModal.classList.add('hidden');
+                projectModal.classList.remove('flex');
+                modalContainer.innerHTML = '';
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        function nextMedia() {
+            if (!currentProjectModal) return;
+            currentMediaIndex = (currentMediaIndex + 1) % currentProjectModal.media.length;
+            renderMedia();
+        }
+
+        function prevMedia() {
+            if (!currentProjectModal) return;
+            currentMediaIndex = (currentMediaIndex - 1 + currentProjectModal.media.length) % currentProjectModal.media.length;
+            renderMedia();
+        }
+
+        function setMedia(index) {
+            currentMediaIndex = index;
+            renderMedia();
+        }
+
+        function renderMedia() {
+            if (!currentProjectModal) return;
+            const media = currentProjectModal.media[currentMediaIndex];
+            
+            modalBadge.textContent = media.label;
+            if (media.label.includes('Avant')) {
+                modalBadge.className = 'absolute top-6 left-6 z-10 bg-slate-800/90 text-white px-5 py-2 border border-slate-600 rounded-full text-sm font-bold shadow-2xl uppercase tracking-wider backdrop-blur-md';
+            } else {
+                modalBadge.className = 'absolute top-6 left-6 z-10 bg-primary/90 text-white px-5 py-2 border border-[#ffa756] rounded-full text-sm font-bold shadow-2xl uppercase tracking-wider backdrop-blur-md';
+            }
+
+            if (media.type === 'image') {
+                modalContainer.innerHTML = `<img src="${media.src}" class="w-full h-full object-contain modal-media-anim" alt="${currentProjectModal.title} ${media.label}">`;
+            } else if (media.type === 'video') {
+                modalContainer.innerHTML = `<video src="${media.src}" autoplay loop muted playsinline class="w-full h-full object-contain modal-media-anim"></video>`;
+            }
+
+            modalDots.innerHTML = currentProjectModal.media.map((_, i) => `
+                <button onclick="setMedia(${i})" class="w-3.5 h-3.5 rounded-full transition-all duration-300 ${i === currentMediaIndex ? 'bg-primary scale-125 shadow-[0_0_10px_rgba(244,133,37,0.8)]' : 'bg-white/40 hover:bg-white/70'}"></button>
+            `).join('');
+        }
     </script>
 </body>
 
